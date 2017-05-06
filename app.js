@@ -114,5 +114,7 @@ app.use('/albums', albums);
 app.use('/genres', genres);
 app.use('/users', users);
 
+console.log('yo');
+
 // Run Server
 app.listen(port);
