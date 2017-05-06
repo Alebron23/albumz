@@ -58,8 +58,8 @@ router.post('/register', function (req, res, next) {
 
                 userRef.push().set(user);
                 console.log("Successfully created new user:", userRecord.uid);
-                req.flash('success_msg', 'You can now login.');
-                res.redirect('/users/login');
+                req.flash('success_msg', 'You are logged in.');
+                res.redirect('/albums');
             })
 
             .catch(function(error) {
