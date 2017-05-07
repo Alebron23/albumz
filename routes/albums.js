@@ -8,15 +8,7 @@ var db          = firebase.database();
 var multer      = require('multer');
 var upload      = multer({dest : './public/images/uploads'});
 
-router.get('*', function(req, res, next){
 
-    if(firebase.auth().currentUser == null){
-        req.flash('error_msg', 'You must be logged in to view albums or genres');
-        res.redirect('/users/login')
-    }
-
-    next();
-});
 
 router.get('/', function (req, res) {
 

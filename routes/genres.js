@@ -7,16 +7,6 @@ var router   = express.Router();
 var firebase = require('firebase');
 var db       = firebase.database();
 
-router.get('*', function(req, res, next){
-
-    if(firebase.auth().currentUser == null){
-        req.flash('error_msg', 'You must be logged in to view albums or genres');
-        res.redirect('/users/login')
-    }
-
-    next();
-});
-
 router.get('/', function (req, res) {
 
     var genreRef  = db.ref("genres");

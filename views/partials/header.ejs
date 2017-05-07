@@ -48,12 +48,26 @@
                         <% } %>
                     </div>
                 </div>
+
+                <div class="col-md-9">
+                        <%if (success_msg != false){ %>
+                            <div class="alert alert-success">
+                                <%= success_msg %>
+                            </div>
+                        <% } %>
+                        
+                        <% if (error_msg != false){ %>
+                            <div class="alert alert-danger">
+                                <%= error_msg %>
+                            </div>
+                        <% } %>
+                </div>
             <% } else { %>
 
                 <div class="row">
                     <div class="col-md-3">
                         <% if(authdata != null){ %>
-                            <p class="well">Welcome, <%= user.first_name%> <%= user.last_name%>  </p>
+                            <p class="well"> Welcome, <%= user.first_name %> <%= user.last_name %>  </p>
                         <% } %>
 
                         <ul class="list-group">
@@ -63,17 +77,19 @@
                     </div>
 
                     <div class="col-md-9">
-                        <%if (success_msg != false) {%>
-                        <div class="alert alert-success">
-                            <%= success_msg %>
-                        </div>
-                        <% }%>
+                        <%if (success_msg != false){ %>
+                            <div class="alert alert-success">
+                                <%= success_msg %>
+                            </div>
+                        <% } %>
+
                         <% if (error_msg != false){ %>
                             <div class="alert alert-danger">
-                                <%=error_msg %>
+
+                                <%= error_msg %>
                             </div>
-                        <% }%>
-                        <% }%>
+                        <% } %>
+            <% } %>
                 </div>
             </div>
         </div>

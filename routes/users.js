@@ -84,6 +84,8 @@ router.post('/login', function (req, res, next) {
 
     var errors = req.validationErrors();
 
+
+
     if(errors) {
         req.flash('error_msg', errors[0].msg);
         res.redirect('/users/login');
