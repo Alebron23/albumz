@@ -9,7 +9,7 @@ var bodyParser       = require('body-parser');
 var session          = require('express-session');
 var expressValidator = require('express-validator');
 var flash            = require('connect-flash');
-var port             = process.env.PORT || 3001;
+var port             = process.env.PORT || 3000;
 var firebase         = require( 'firebase');
 
 var config = {
