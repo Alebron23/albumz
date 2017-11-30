@@ -6,6 +6,7 @@ var router      = express.Router();
 var firebase    = require('firebase');
 var db          = firebase.database();
 var multer      = require('multer');
+console.log('yo');
 var upload      = multer({dest : './public/images/uploads'});
 
 
@@ -192,7 +193,7 @@ router.delete('/delete/:id', function (req, res) {
 
     albumRef.remove();
     req.flash('success_msg', 'Album Deleted');
-    res.send(200);
+    res.sendStatus(200);
 });
 
 module.exports = router;
